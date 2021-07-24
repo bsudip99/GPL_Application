@@ -37,6 +37,7 @@ namespace UnitTestProject
         {
             
             var circ = new GPLApplication.Circle();
+
             Color c = Color.Black;
             int x = 80, y = 70, radius = 65;
             circ.set(c, x, y, radius);
