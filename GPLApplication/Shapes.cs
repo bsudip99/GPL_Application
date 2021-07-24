@@ -28,8 +28,6 @@ namespace GPLApplication
         /// <param name="y"></param>
         public Shapes(Color colour, int x, int y)
         {
-          
-
             this.colour = colour;
             this.x = x;
             this.y = y;
