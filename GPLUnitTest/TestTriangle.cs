@@ -35,6 +35,7 @@ namespace UnitTestProject
         [TestMethod]
         public void UniTestTri()
         {
+            
             var tri = new GPLApplication.Triangle();
             Color c = Color.Black;
             int  xcordinate1 = 30, ycordinate1=40, xcordinate2=50, ycordinate2=60, xcordinate3=70, ycordinate3=80, xcordinate4=90, ycordinate4 = 90, xcordinate5=100, ycordinate5=110, xcordinate6=120, ycordinate6 = 130;

@@ -37,6 +37,7 @@ namespace UnitTestProject
         [TestMethod]
         public void UniTestRect()
         {
+           
             var rect = new GPLApplication.Rectangle();
             Color c = Color.Black;
             int x = 80, y = 70, height = 85, width = 65;
