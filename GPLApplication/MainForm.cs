@@ -93,6 +93,7 @@ namespace GPLApplication
                 }
                 //displays the text inside the file on TextBox named as txtInput                
                 txt_Command_Box.Text = File.ReadAllText(openFileDialog1.FileName);
+
             }
         }
 
