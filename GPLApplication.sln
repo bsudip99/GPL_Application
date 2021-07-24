@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPLApplication", "GPLApplication\GPLApplication.csproj", "{E3FAD901-08CA-423C-977B-CB25D123A03E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPLUnitTest", "GPLUnitTest\GPLUnitTest.csproj", "{3D0AAB32-A4CF-41B3-927F-F87A5324B074}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPLUnitTest1", "GPLTest1\GPLUnitTest1.csproj", "{3366A641-9515-4835-8822-4C354F2FFE02}"
 	ProjectSection(ProjectDependencies) = postProject
 		{E3FAD901-08CA-423C-977B-CB25D123A03E} = {E3FAD901-08CA-423C-977B-CB25D123A03E}
 	EndProjectSection
@@ -20,10 +20,10 @@ Global
 		{E3FAD901-08CA-423C-977B-CB25D123A03E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3FAD901-08CA-423C-977B-CB25D123A03E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3FAD901-08CA-423C-977B-CB25D123A03E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D0AAB32-A4CF-41B3-927F-F87A5324B074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D0AAB32-A4CF-41B3-927F-F87A5324B074}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D0AAB32-A4CF-41B3-927F-F87A5324B074}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D0AAB32-A4CF-41B3-927F-F87A5324B074}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3366A641-9515-4835-8822-4C354F2FFE02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3366A641-9515-4835-8822-4C354F2FFE02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3366A641-9515-4835-8822-4C354F2FFE02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3366A641-9515-4835-8822-4C354F2FFE02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
