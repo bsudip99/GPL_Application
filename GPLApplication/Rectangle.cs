@@ -37,7 +37,7 @@ namespace GPLApplication
         /// <param name="height">Rectangle's height</param>
         public Rectangle(int x, int y, int width, int height)
         {
-            this.width = width;
+            this.width =   width;
             this.height = height;
         }
 
