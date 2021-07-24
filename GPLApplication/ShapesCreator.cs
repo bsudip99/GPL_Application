@@ -16,6 +16,6 @@ namespace GPLApplication
         /// </summary>
         /// <param name="ShapeType">Shape parameter</param>
         /// <returns></returns>
-        public abstract IShapes getShape(string ShapeType);
+      public abstract IShapes getShape(string ShapeType);
     }
 }
