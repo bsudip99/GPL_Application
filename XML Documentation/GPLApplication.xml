@@ -1,0 +1,454 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GPLApplication</name>
+    </assembly>
+    <members>
+        <member name="T:GPLApplication.Circle">
+            <summary>
+            holds commands of the class: circle
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Circle.x">
+            <summary>
+            used to get integer values for circle 
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Circle.y">
+            <summary>
+            used to get integer values for circle 
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Circle.radius">
+            <summary>
+            used to get integer values for circle 
+            </summary>
+        </member>
+        <member name="M:GPLApplication.Circle.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            used to pass values of the circle
+            </summary>
+            <param name="x">used to set x-cordinate value</param>
+            <param name="y">used to set y-cordinate value</param>
+            <param name="radius">used to set radius value for circle</param>
+        </member>
+        <member name="M:GPLApplication.Circle.draw(System.Drawing.Graphics)">
+            <summary>
+            used to draw circle on the output panel
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:GPLApplication.Circle.set(System.Drawing.Color,System.Int32[])">
+            <summary>
+            used to define color and set values for x, y and radius
+            </summary>
+            <param name="c">used to define color for circle</param>
+            <param name="list">list of parameters that will be passed inside the function</param>
+        </member>
+        <member name="T:GPLApplication.CommandValidation">
+            <summary>
+            used for validating the inputs provided by the user
+            </summary>
+        </member>
+        <member name="F:GPLApplication.CommandValidation.isValidCommand">
+            <summary>
+            used to get and set values for the application
+            </summary>
+        </member>
+        <member name="M:GPLApplication.CommandValidation.#ctor(System.Windows.Forms.TextBox)">
+            <summary>
+            used to check the commands provided in the command box
+            </summary>
+            <param name="txtCommand">used to get commands input by the user</param>
+        </member>
+        <member name="M:GPLApplication.CommandValidation.checkLineValidation(System.String)">
+            <summary>
+            used to check each line to determine whether the commands input by the users contain those commands 
+            </summary>
+            <param name="lineOfCommand"></param>
+        </member>
+        <member name="M:GPLApplication.CommandValidation.checkIfVariableDefined(System.String)">
+            <summary>
+            to check whether the variable is defined or not
+            </summary>
+            <param name="variable">used to get the variables input by the user</param>
+        </member>
+        <member name="M:GPLApplication.CommandValidation.checkLoopAndIfValidation">
+            <summary>
+            used to check the loop and if statement validation
+            </summary>
+        </member>
+        <member name="T:GPLApplication.IShapes">
+            <summary>
+            to provide shape of objects
+            </summary>
+        </member>
+        <member name="M:GPLApplication.IShapes.set(System.Drawing.Color,System.Int32[])">
+            <summary>
+            used to set color and values of the shapes
+            </summary>
+            <param name="c">define the color</param>
+            <param name="list">list of parameters that will be passed inside the function</param>
+        </member>
+        <member name="M:GPLApplication.IShapes.draw(System.Drawing.Graphics)">
+            <summary>
+            used to draw shape of the object
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="F:GPLApplication.MainForm.factory">
+            <summary>
+            variables to generate different shapes through the commands provided by the users
+            </summary>
+        </member>
+        <member name="M:GPLApplication.MainForm.saveToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            used to save the ruuning commands in the specific drive as txt file
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GPLApplication.MainForm.importToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            used for loading the commands that were saved in the txt files
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GPLApplication.MainForm.closeToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            used to close the application
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GPLApplication.MainForm.aboutToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            used to provide information about the application
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GPLApplication.MainForm.applicationGuideToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            used to provide guidelines about the application and commands that can be used in the application
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GPLApplication.MainForm.txt_Execution_Box_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            check the validation and run the program logic as per the commands provided in the execution box
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:GPLApplication.MainForm.commandLoad">
+            <summary>
+            used to load the commands in the output panel
+            </summary>
+        </member>
+        <member name="M:GPLApplication.MainForm.commandRun(System.String)">
+            <summary>
+            the codes are executed as per the users input after run command is provided in the execution box
+            </summary>
+            <param name="oneLineCommand"></param>
+        </member>
+        <member name="M:GPLApplication.MainForm.getSize(System.String)">
+            <summary>
+            used for returning the size of the shapes as per the commands provided
+            </summary>
+            <param name="lineCommand"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GPLApplication.MainForm.generateDrawCommand(System.String)">
+            <summary>
+            Initiate the shapes as the per the commands given by the user in command box
+            </summary>
+            <param name="lineOfCommand"></param>
+        </member>
+        <member name="M:GPLApplication.MainForm.getIfStartLineNumber">
+            <summary>
+            Initiate whether if statement is present in the commands given in the command box
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GPLApplication.MainForm.getEndifEndLineNumber">
+            <summary>
+            Determine whether the if statment ended with the endif statement
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GPLApplication.MainForm.getLoopStartLineNumber">
+            <summary>
+            Initiate the loop as per the command given in the command box
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GPLApplication.MainForm.getLoopEndLineNumber">
+            <summary>
+            Determine whether the loop has ended with end looop
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GPLApplication.MainForm.drawRectangle(System.Int32,System.Int32)">
+            <summary>
+            Draw the rectangle as per the command provided
+            </summary>
+            <param name="width"></param>
+            <param name="height"></param>
+        </member>
+        <member name="M:GPLApplication.MainForm.drawCircle(System.Int32)">
+            <summary>
+            Draw circle as per the command provided
+            </summary>
+            <param name="radius"></param>
+        </member>
+        <member name="M:GPLApplication.MainForm.drawTriangle(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Draw triangle as per the command provided
+            </summary>
+            <param name="rBase"></param>
+            <param name="adj"></param>
+            <param name="hyp"></param>
+        </member>
+        <member name="M:GPLApplication.MainForm.moveTo(System.Int32,System.Int32)">
+            <summary>
+            Display the values of X-axis and Y-axis
+            </summary>
+            <param name="toX"></param>
+            <param name="toY"></param>
+        </member>
+        <member name="M:GPLApplication.MainForm.drawTo(System.Int32,System.Int32)">
+            <summary>
+            Draw the pen position as per the X-cordinate and Y-cordinate
+            </summary>
+            <param name="toX"></param>
+            <param name="toY"></param>
+        </member>
+        <member name="F:GPLApplication.MainForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GPLApplication.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GPLApplication.MainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:GPLApplication.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:GPLApplication.Rectangle">
+            <summary>
+            Class is declared as rectangle and interface is implemented
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Rectangle.x">
+            <summary>
+            Ineteger values for x-axis, y-axis, width and height of the rectangle
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Rectangle.y">
+            <summary>
+            Ineteger values for x-axis, y-axis, width and height of the rectangle
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Rectangle.width">
+            <summary>
+            Ineteger values for x-axis, y-axis, width and height of the rectangle
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Rectangle.height">
+            <summary>
+            Ineteger values for x-axis, y-axis, width and height of the rectangle
+            </summary>
+        </member>
+        <member name="M:GPLApplication.Rectangle.#ctor">
+            <summary>
+            Provides width and height of the rectangle 
+            </summary>
+        </member>
+        <member name="M:GPLApplication.Rectangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Pass integer values of x-axis, y-axis, width and height for the rectangle
+            </summary>
+            <param name="x">X-axis</param>
+            <param name="y">Y-axis</param>
+            <param name="width">Rectangle's width</param>
+            <param name="height">Rectangle's height</param>
+        </member>
+        <member name="M:GPLApplication.Rectangle.draw(System.Drawing.Graphics)">
+            <summary>
+            Draw rectangular shape
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:GPLApplication.Rectangle.set(System.Drawing.Color,System.Int32[])">
+            <summary>
+            Set values of x-axis, y-axis, height and width
+            </summary>
+            <param name="c">Color</param>
+            <param name="list">List of parameters</param>
+        </member>
+        <member name="T:GPLApplication.Shapes">
+            <summary>
+            Provide shape of the object
+            </summary>
+        </member>
+        <member name="M:GPLApplication.Shapes.#ctor(System.Drawing.Color,System.Int32,System.Int32)">
+            <summary>
+            Set color, x-axis and y-axis values
+            </summary>
+            <param name="colour"></param>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:GPLApplication.Shapes.draw(System.Drawing.Graphics)">
+            <summary>
+            Used as drawing shape of any object
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:GPLApplication.Shapes.set(System.Drawing.Color,System.Int32[])">
+            <summary>
+            Used to set values for different shapes
+            </summary>
+            <param name="colour"></param>
+            <param name="list"></param>
+        </member>
+        <member name="M:GPLApplication.Shapes.ToString">
+            <summary>
+            Used to overwrite the values
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GPLApplication.ShapesCreator">
+            <summary>
+            Declare class name as ShapesCreator
+            </summary>
+        </member>
+        <member name="M:GPLApplication.ShapesCreator.getShape(System.String)">
+            <summary>
+            Used to pass shape of any objects
+            </summary>
+            <param name="ShapeType">Shape parameter</param>
+            <returns></returns>
+        </member>
+        <member name="T:GPLApplication.ShapesFactory">
+            <summary>
+            Declare class as ShapesFactory
+            </summary>
+        </member>
+        <member name="M:GPLApplication.ShapesFactory.getShape(System.String)">
+            <summary>
+            Required for passing the shape of the objects
+            </summary>
+            <param name="ShapeType">Shape parameter</param>
+            <returns></returns>
+        </member>
+        <member name="T:GPLApplication.Triangle">
+            <summary>
+            Declare class as triangle and implement the interface
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Triangle.xcordinate1">
+            <summary>
+            Inetger values for the triangle sides
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Triangle.ycordinate1">
+            <summary>
+            Inetger values for the triangle sides
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Triangle.xcordinate2">
+            <summary>
+            Inetger values for the triangle sides
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Triangle.ycordinate2">
+            <summary>
+            Inetger values for the triangle sides
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Triangle.xcordinate3">
+            <summary>
+            Inetger values for the triangle sides
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Triangle.ycordinate3">
+            <summary>
+            Inetger values for the triangle sides
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Triangle.xcordinate4">
+            <summary>
+            Inetger values for the triangle sides
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Triangle.ycordinate4">
+            <summary>
+            Inetger values for the triangle sides
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Triangle.xcordinate5">
+            <summary>
+            Inetger values for the triangle sides
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Triangle.ycordinate5">
+            <summary>
+            Inetger values for the triangle sides
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Triangle.xcordinate6">
+            <summary>
+            Inetger values for the triangle sides
+            </summary>
+        </member>
+        <member name="F:GPLApplication.Triangle.ycordinate6">
+            <summary>
+            Inetger values for the triangle sides
+            </summary>
+        </member>
+        <member name="M:GPLApplication.Triangle.draw(System.Drawing.Graphics)">
+            <summary>
+            Draw the triangular shape as per the sides provided
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:GPLApplication.Triangle.set(System.Drawing.Color,System.Int32[])">
+            <summary>
+            Set values for different sides of the traingle 
+            </summary>
+            <param name="c">Color</param>
+            <param name="list">List of parameters</param>
+        </member>
+        <member name="T:GPLApplication.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:GPLApplication.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:GPLApplication.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
