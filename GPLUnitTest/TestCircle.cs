@@ -1,18 +1,16 @@
-﻿using GPLApplication;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 
-
 namespace UnitTestProject
 {
     /// <summary>
-    /// Declare class name as TestRectangle
+    /// Declar class name as TestTriangle
     /// </summary>
     [TestClass]
-    public class TestRectangle
+    public class TestCircle
     {
         private TestContext testContextInstance;
 
@@ -35,16 +33,14 @@ namespace UnitTestProject
         /// Used to check the resultant value with the actual value
         /// </summary>
         [TestMethod]
-        public void UniTestRect()
+        public void UniTestCir()
         {
-            var rect = new GPLApplication.Rectangle();
+            var circ = new GPLApplication.Circle();
             Color c = Color.Black;
-            int x = 80, y = 70, height = 85, width = 65;
-            rect.set(c, x, y, height, width);
-            Assert.AreEqual(70, rect.y);
-           
+            int x = 80, y = 70, radius = 65;
+            circ.set(c, x, y, radius);
+            Assert.AreEqual(65, circ.radius);
+
         }
-
-
     }
 }

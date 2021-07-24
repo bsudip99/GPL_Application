@@ -113,7 +113,7 @@ namespace GPLApplication
         /// <param name="e"></param>
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string des = "GPL Application. Sudip Bhandari";
+            string des = "GPL Application. Version 1.0 BY Sudip Bhandari";
             MessageBox.Show(des);
         }
 
@@ -131,7 +131,7 @@ namespace GPLApplication
         {
             try
             {
-                System.Diagnostics.Process.Start("file:///D:/GPLApplicationCommands.pdf");
+                System.Diagnostics.Process.Start("file:///G:/GPLApplicationGuide.pdf");
             }
             catch (Exception ex)
             {
@@ -733,6 +733,8 @@ namespace GPLApplication
             x = toX;
             y = toY;
         }
+
+     
 
         /// <summary>
         /// Draw the pen position as per the X-cordinate and Y-cordinate
